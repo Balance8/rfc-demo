@@ -10,8 +10,6 @@ import {
 } from '@repo/design-system/components/ui/breadcrumb';
 import {
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from '@repo/design-system/components/ui/chart';
@@ -24,14 +22,14 @@ import {
 import {
   Area,
   AreaChart,
-  Bar,
-  BarChart,
   CartesianGrid,
   Line,
   LineChart,
   XAxis,
 } from 'recharts';
 import { AppSidebar } from './_components/app-sidebar';
+import { BarChartComponent } from './_components/bar-chart';
+import { PieChartComponent } from './_components/pie-chart';
 
 // Chart data
 const chartData = [
@@ -81,7 +79,7 @@ export default function Page() {
         </header>
 
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+          <div className="grid auto-rows-min items-center gap-4 md:grid-cols-3">
             {/* Area Chart */}
             <ChartContainer config={chartConfig} className="min-h-[200px]">
               <AreaChart
@@ -163,57 +161,11 @@ export default function Page() {
             </ChartContainer>
 
             {/* Bar Chart */}
-            <ChartContainer config={chartConfig} className="min-h-[200px]">
-              <BarChart
-                accessibilityLayer
-                data={chartData}
-                margin={{
-                  left: 12,
-                  right: 12,
-                }}
-              >
-                <CartesianGrid vertical={false} />
-                <XAxis
-                  dataKey="month"
-                  tickLine={false}
-                  tickMargin={10}
-                  axisLine={false}
-                  tickFormatter={(value) => value.slice(0, 3)}
-                />
-                <ChartTooltip
-                  cursor={false}
-                  content={<ChartTooltipContent indicator="dashed" />}
-                />
-                <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-                <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-              </BarChart>
-            </ChartContainer>
+            <PieChartComponent />
           </div>
 
           {/* Large Bar Chart */}
-          <ChartContainer config={chartConfig} className="min-h-[400px]">
-            <BarChart
-              accessibilityLayer
-              data={chartData}
-              margin={{
-                left: 12,
-                right: 12,
-              }}
-            >
-              <CartesianGrid vertical={false} />
-              <XAxis
-                dataKey="month"
-                tickLine={false}
-                tickMargin={10}
-                axisLine={false}
-                tickFormatter={(value) => value.slice(0, 3)}
-              />
-              <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-              <ChartLegend content={<ChartLegendContent />} />
-              <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-              <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-            </BarChart>
-          </ChartContainer>
+          <BarChartComponent />
         </div>
       </SidebarInset>
     </SidebarProvider>
