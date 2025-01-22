@@ -4,6 +4,20 @@
   "javascript": {
     "globals": ["Liveblocks"]
   },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "cn"]
+          }
+        }
+      }
+    }
+  },
   "files": {
     "ignore": [
       "packages/design-system/components/ui/**",
