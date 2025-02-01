@@ -165,8 +165,8 @@ importers:
         specifier: ^8.5.0
         version: 8.5.0(storybook@8.5.0)
       '@storybook/addon-themes':
-        specifier: ^8.5.0
-        version: 8.5.0(storybook@8.5.0)
+        specifier: ^8.5.2
+        version: 8.5.2(storybook@8.5.0)
       '@storybook/blocks':
         specifier: ^8.5.0
         version: 8.5.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.0)
@@ -3032,10 +3032,10 @@ packages:
     peerDependencies:
       storybook: ^8.5.0
 
-  '@storybook/addon-themes@8.5.0':
-    resolution: {integrity: sha512-pBNut4sLfcOeLBvWdNAJ3cxv/BfMSTmJcUtSzE4G+1pVNsBbGF+T2f/GM0IjaM0K8Ft03VDzeEAB64nluDS4RA==}
+  '@storybook/addon-themes@8.5.2':
+    resolution: {integrity: sha512-MTJkPwXqLK2Co186EUw2wr+1CpVRMbuWsOmQvhMHeU704kQtSYKkhu/xmaExuDYMupn5xiKG0p8Pt5Ck3fEObQ==}
     peerDependencies:
-      storybook: ^8.5.0
+      storybook: ^8.5.2
 
   '@storybook/addon-toolbars@8.5.0':
     resolution: {integrity: sha512-q3yYYO2WX8K2DYNM++FzixGDjzYaeREincgsl2WXYXrcuGb5hkOoOgRiAQL8Nz9NQ1Eo+B/yZxrhG/5VoVhUUQ==}
@@ -5267,6 +5267,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -10225,7 +10226,7 @@ snapshots:
       storybook: 8.5.0
       ts-dedent: 2.2.0
 
-  '@storybook/addon-themes@8.5.0(storybook@8.5.0)':
+  '@storybook/addon-themes@8.5.2(storybook@8.5.0)':
     dependencies:
       storybook: 8.5.0
       ts-dedent: 2.2.0
